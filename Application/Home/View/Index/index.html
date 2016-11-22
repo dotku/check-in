@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php echo C('SITE_TITLE') ?></title>
+	<link rel="apple-touch-icon" href="__PUBLIC__/assets/image/icon-check.png">
     <link href="/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+	<link href="/lib/dpatch/dist/css/general-cn.css" rel="stylesheet" />
     <script src="/lib/jquery/dist/jquery.min.js"></script>
     <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <style>
@@ -148,7 +150,8 @@
 					$.each(rsp.list_checkin, function(i, o){
 						$checkinList.append(
 							'<div class="list-group-item">' 
-							+ o.created_time 
+							+ '<h4 class="list-group-item-heading">' + o.created_time + '</h4>'
+							+ '<div class="list-group-item-text">' + o.description + '</div>'
 							+ '</div>'
 						);
 					});
